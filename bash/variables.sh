@@ -11,7 +11,7 @@ export EDITOR="vim"
 
 # default screen pager
 export PAGER="less"
-export LESS="MegQdS"   # default options I like for less
+export LESS="FXMegQdRS"   # default options I like for less (R needed for color)
 
 # path related
 # initial sensible set
