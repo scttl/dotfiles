@@ -1,0 +1,13 @@
+[user]
+	name = Scott Leishman
+	email = scott.leishman@gmail.com
+[alias]
+	co = checkout
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	grep = auto
+[core]
+	editor = vim
+	autocrlf = input

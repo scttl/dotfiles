@@ -1,5 +1,8 @@
 Standard collection of useful configuration files, setup just the way I like
-'em for things like:
+'em for programs including:
 * bash
 * vi/vim/gvim
 * git
+
+Install via install.sh, existing files are backed up, and new files are 
+symlinked back to this repository.
