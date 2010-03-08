@@ -1,7 +1,7 @@
 # Miscellaneous additional commands and aliases
 
 # coloring
-if [ -x /usr/bin/dircolors ]; then
+if [ -x `type -P dircolors` ]; then
     eval "`dircolors -b`"
     alias ls='ls --color=auto'
     alias grep='grep --color=auto'

@@ -21,7 +21,7 @@ done
 echo
 
 #extract encrypted local files
-if [ -x /usr/bin/bcrypt ]; then
+if [ -x `type -P bcrypt` ]; then
     echo "Decrypting local files..."
     for name in $PWD/bash/local/*.bfe; do
         while true; do
