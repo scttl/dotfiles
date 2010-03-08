@@ -1,0 +1,4 @@
+#ignore every non-encrypted file
+*
+!*.bfe
+!.gitignore

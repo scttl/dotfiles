@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo "Installing dotfiles..."
 for name in *; do
     #ensure we don't copy items that aren't .files
     case "$name" in
@@ -17,3 +18,19 @@ for name in *; do
     echo "Creating $target"
     ln -snfv "$PWD/$name" "$target"
 done
+echo
+
+#extract encrypted local files
+if [ -x /usr/bin/bcrypt ]; then
+    echo "Decrypting local files..."
+    for name in $PWD/bash/local/*.bfe; do
+        while true; do
+            read -p "Attempt to decrypt: `basename $name`?" yn
+            case $yn in
+                [Yy]* ) bcrypt -r $name; break;;
+                [Nn]* ) break;;
+                * ) echo "Please answer yes or no.";;
+            esac
+        done
+    done
+fi
