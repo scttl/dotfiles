@@ -20,3 +20,8 @@ done
 for file in "${HOME}/.bash/commands/*"; do
     source $file
 done
+
+# local (machine specific) updates
+for file in "${HOME}/.bash/local/*"; do
+    source $file
+done
