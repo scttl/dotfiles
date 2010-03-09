@@ -12,16 +12,16 @@ source "${HOME}/.bash/shell.sh"
 source "${HOME}/.bash/prompt.sh"
 
 # shell completion
-for file in "${HOME}/.bash/completion/*"; do
+for file in ${HOME}/.bash/completion/*; do
     source $file
 done
 
 # new commands (aliases)
-for file in "${HOME}/.bash/commands/*"; do
+for file in ${HOME}/.bash/commands/*; do
     source $file
 done
 
 # local (machine specific) updates
-for file in "${HOME}/.bash/local/*"; do
+for file in ${HOME}/.bash/local/*.sh; do
     source $file
 done

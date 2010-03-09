@@ -12,7 +12,7 @@ export EDITOR="vim"
 # default screen pager
 export PAGER="less"
 export LESS="FXMegQdRS"   # default options I like for less (R needed for color)
-[ -x `type -P lesspipe` ] && eval "$(lesspipe)"
+[ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
 
 # path related
 # initial sensible set

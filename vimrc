@@ -43,8 +43,10 @@ if has("autocmd")
 endif
 
 " spelling
-set spelllang=en_us,en_ca
-"set spell     " enable it manually, since most of my work is code
+if version >= 700
+  set spelllang=en_us,en_ca
+  "set spell     " enable it manually, since most of my work is code
+endif
 
 " miscellaneous
 " set verbose=9           " useful for debugging
