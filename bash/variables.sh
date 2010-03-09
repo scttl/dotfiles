@@ -16,9 +16,9 @@ export LESS="FXMegQdRS"   # default options I like for less (R needed for color)
 
 # path related
 # initial sensible set
-PATH="/sbin:/bin:usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin"
+PATH="/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin"
 MANPATH="/usr/man:/usr/local/man:/usr/share/man"
-LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib64:/usr/lib:/usr/local/lib64:/usr/local/lib"
+LD_LIBRARY_PATH="/usr/lib64:/usr/lib:/usr/local/lib64:/usr/local/lib"
 # X related
 PATH="$PATH:/usr/X11/bin"
 MANPATH="$MANPATH:/usr/X11/man"
