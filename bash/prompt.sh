@@ -9,10 +9,10 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     #[light green user@host:light blue cwd]$
-    PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$'
+    PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]> '
 else
     #plain-vanilla [user@host:cwd]$
-    PS1='[\u@\h:\w]$'
+    PS1='\u@\h:\w> '
 fi
 
 case $TERM in 
