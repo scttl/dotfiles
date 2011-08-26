@@ -30,6 +30,9 @@ include /usr/local/share/doc/task/rc/holidays-US.rc
 # task syncing
 #merge.default.uri=rsync://scottl@cs.toronto.edu/.task/ #problems from work
 merge.default.uri=ssh://scottl@cs.toronto.edu/.task/
+merge.autopush no  #doesn't work (wrong path for SSH)
+push.default.uri=ssh://scottl@cs.toronto.edu/.task/
+pull.default.uri=ssh://scottl@cs.toronto.edu/.task/
 
 # Date formatting
 dateformat=YMD
