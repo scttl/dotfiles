@@ -43,3 +43,27 @@ default.priority=M
 
 # Aliases
 alias.rm=delete
+
+# Custom Reports
+#don't show home project tasks by default
+report.list.filter=status:pending project.not:home
+report.ls.filter=status:pending project.not:home
+report.next.filter=status:pending limit:page depends.none: project.not:home
+
+report.listall.columns=id,project,priority,due,active,age,description
+report.listall.description=List all tasks (including home)
+report.listall.filter=status:pending
+report.listall.labels=ID,Project,Pri,Due,Active,Age,Description
+report.listall.sort=due+,priority-,active-,project+,description+
+
+report.listhome.columns=id,project,priority,due,active,age,description
+report.listhome.description=List home project tasks only
+report.listhome.filter=status:pending pro:home
+report.listhome.labels=ID,Project,Pri,Due,Active,Age,Description
+report.listhome.sort=due+,priority-,active-,project+,description+
+
+report.nextall.columns=id,project,priority,due,active,age,description
+report.nextall.description=List all most urgent tasks
+report.nextall.filter=status:pending limit:page depends.none:
+report.nextall.labels=ID,Project,Pri,Due,Active,Age,Description
+report.nextall.sort=due+,priority-,active-,project+,description+
