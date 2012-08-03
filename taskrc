@@ -25,14 +25,14 @@ include /usr/local/share/doc/task/rc/dark-256.theme
 #include /usr/local/share/doc/task/rc/dark-yellow-green.theme
 
 # Holidays
-include /usr/local/share/doc/task/rc/holidays-US.rc
+include /usr/local/share/doc/task/rc/holidays.en-US.rc
 
 # task syncing
 #merge.default.uri=rsync://scottl@cs.toronto.edu/.task/ #problems from work
-merge.default.uri=ssh://scottl@cs.toronto.edu/.task/
+merge.default.uri=ssh://scottl@cs.toronto.edu/u/scottl/.task/
 merge.autopush=no  #doesn't work (wrong path for SSH)
-push.default.uri=ssh://scottl@cs.toronto.edu/.task/
-pull.default.uri=ssh://scottl@cs.toronto.edu/.task/
+push.default.uri=ssh://scottl@cs.toronto.edu/u/scottl/.task/
+pull.default.uri=ssh://scottl@cs.toronto.edu/u/scottl/.task/
 
 # Date formatting
 dateformat=YMD
@@ -50,20 +50,20 @@ report.list.filter=status:pending project.not:home
 report.ls.filter=status:pending project.not:home
 report.next.filter=status:pending limit:page depends.none: project.not:home
 
-report.listall.columns=id,project,priority,due,active,age,description
+report.listall.columns=id,project,priority,due,start.active,entry.age,description
 report.listall.description=List all tasks (including home)
 report.listall.filter=status:pending
 report.listall.labels=ID,Project,Pri,Due,Active,Age,Description
-report.listall.sort=due+,priority-,active-,project+,description+
+report.listall.sort=due+,priority-,start-,project+,description+
 
-report.listhome.columns=id,project,priority,due,active,age,description
+report.listhome.columns=id,project,priority,due,start.active,entry.age,description
 report.listhome.description=List home project tasks only
 report.listhome.filter=status:pending pro:home
 report.listhome.labels=ID,Project,Pri,Due,Active,Age,Description
-report.listhome.sort=due+,priority-,active-,project+,description+
+report.listhome.sort=due+,priority-,start-,project+,description+
 
-report.nextall.columns=id,project,priority,due,active,age,description
+report.nextall.columns=id,project,priority,due,start.active,entry.age,description
 report.nextall.description=List all most urgent tasks
 report.nextall.filter=status:pending limit:page depends.none:
 report.nextall.labels=ID,Project,Pri,Due,Active,Age,Description
-report.nextall.sort=due+,priority-,active-,project+,description+
+report.nextall.sort=due+,priority-,start-,project+,description+
