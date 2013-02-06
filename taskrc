@@ -67,3 +67,4 @@ report.nextall.description=List all most urgent tasks
 report.nextall.filter=status:pending limit:page depends.none:
 report.nextall.labels=ID,Project,Pri,Due,Active,Age,Description
 report.nextall.sort=due+,priority-,start-,project+,description+
+confirmation=no
