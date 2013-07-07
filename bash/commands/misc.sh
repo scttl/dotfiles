@@ -48,6 +48,7 @@ function mc {
 
 # python related
 alias p='python'
+alias p3='python3'
 
 # taskwarrior related
 alias t='task'
