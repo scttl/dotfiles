@@ -49,6 +49,7 @@ function mc {
 # python related
 alias p='python'
 alias p3='python3'
+alias web='python -m SimpleHTTPServer'
 
 # taskwarrior related
 alias t='task'

@@ -1,0 +1,6 @@
+To install
+==========
+1. copy the parent directory to ~/.gconf/apps/gnome-terminal/profiles
+2. Use gconf-editor to edit the apps/gnome-terminal/global/profile_list to add 
+   this new one
+3. log out then log back in
