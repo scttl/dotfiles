@@ -9,5 +9,7 @@
 	branch = auto
 	grep = auto
 [core]
-	editor = vim
+	editor = vimx
 	autocrlf = input
+[credential]
+	helper = cache --timeout=3600
