@@ -1,12 +1,24 @@
 " use vim not vi
 set nocompatible
 
+" vundle prep
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" load plugins
+Bundle 'gmarik/vundle'
+Bundle 'wincent/Command-T'
+Bundle 'hdima/python-syntax'
+Bundle 'tpope/vim-fugitive'
+
 " General behaviour and appearance
 filetype plugin indent on " do file-type and language specific indenting etc.
 set nobackup              " don't litter directories with backup files
 set nowritebackup         " not even when saving (slows large file saves)
 set vb                    " use visual bell
 set ruler                 " display column position
+set number                " show row numbers
 set showcmd               " display incomplete commands
 set incsearch             " do incremental searching
 set showmatch             " show matching parens
@@ -35,6 +47,7 @@ if &t_Co > 2
 endif
 
 " custom mappings
+let mapleader=","
 "map gf :tabe <cfile><CR>   "open a filename under cursor.  Useful for wiki
 
 " autocommands
