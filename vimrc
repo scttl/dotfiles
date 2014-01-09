@@ -23,11 +23,10 @@ set showcmd               " display incomplete commands
 set incsearch             " do incremental searching
 set showmatch             " show matching parens
 set backspace=indent,eol,start " backspace over everything in insert mode
-set autoindent            " start next line under first when indented
 set textwidth=79          " wrap text and insert linebreaks after 79 chars
-set tabstop=4             " tabs are displayed as 4 spaces
-set softtabstop=4         " help editing too
-set shiftwidth=4          " default to a 4 space indent
+set tabstop=2             " tabs are displayed as 2 spaces
+set softtabstop=2         " help editing too
+set shiftwidth=2          " default to a 2 space indent
 set expandtab             " convert tab keystroke into shiftwidth spaces
 set history=50            " number of remembered command lines
 
