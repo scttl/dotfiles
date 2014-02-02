@@ -42,12 +42,12 @@ if [ -x `type -P git` -a ! -d "${HOME}/.vim/bundle/vundle" ]; then
 fi
 
 # setup task client certs for syncing
-for f in cert key; do
-  if [ -x `type -P scp` -a ! -f "${HOME}/.task/scottl.${f}.pem" ]; then
+for f in scottl.cert scottl.key ca.cert; do
+  if [ -x `type -P scp` -a ! -f "${HOME}/.task/${f}.pem" ]; then
     echo "Copying task sync client ${f} (ensure ssh keys setup!)..."
     mkdir -p "${HOME}/.task"
-    scp scottl@mini.sct.tl:/Users/scottl/.task/scottl.${f}.pem \
-        "${HOME}/.task/scottl.${f}.pem"
-    chmod 600 "${HOME}/.task/scottl.${f}.pem"
+    scp scottl@mini.sct.tl:/Users/scottl/.task/${f}.pem \
+        "${HOME}/.task/${f}.pem"
+    chmod 600 "${HOME}/.task/${f}.pem"
   fi
 done
