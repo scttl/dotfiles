@@ -40,3 +40,14 @@ if [ -x `type -P git` -a ! -d "${HOME}/.vim/bundle/vundle" ]; then
     echo "Cloning Vundle (vim plugin manager)..."
     git clone https://github.com/gmarik/vundle.git "${HOME}/.vim/bundle/vundle"
 fi
+
+# setup task client certs for syncing
+for f in cert key; do
+  if [ -x `type -P scp` -a ! -f "${HOME}/.task/scottl.${f}.pem" ]; then
+    echo "Copying task sync client ${f} (ensure ssh keys setup!)..."
+    mkdir -p "${HOME}/.task"
+    scp scottl@mini.sct.tl:/Users/scottl/.task/scottl.${f}.pem \
+        "${HOME}/.task/scottl.${f}.pem"
+    chmod 600 "${HOME}/.task/scottl.${f}.pem"
+  fi
+done

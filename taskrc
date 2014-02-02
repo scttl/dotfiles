@@ -27,12 +27,12 @@ include /usr/local/share/doc/task/rc/dark-256.theme
 # Holidays
 include /usr/local/share/doc/task/rc/holidays.en-US.rc
 
-# task syncing
-#merge.default.uri=rsync://scottl@cs.toronto.edu/.task/ #problems from work
-merge.default.uri=ssh://scottl@cs.toronto.edu/u/scottl/.task/
-merge.autopush=no  #doesn't work (wrong path for SSH)
-push.default.uri=ssh://scottl@cs.toronto.edu/u/scottl/.task/
-pull.default.uri=ssh://scottl@cs.toronto.edu/u/scottl/.task/
+# taskd syncing
+taskd.certificate=~\/.task\/scottl.cert.pem
+taskd.key=~\/.task\/scottl.key.pem
+taskd.ca=~\/.task\/ca.cert.pem
+taskd.server=mini.sct.tl:6544
+taskd.credentials=sct.tl\/scottl\/9a3d9be6-083f-4730-861d-d06aeb58e5f0
 
 # Date formatting
 dateformat=YMD
