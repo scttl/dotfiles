@@ -42,12 +42,21 @@ if [ -x `type -P git` -a ! -d "${HOME}/.vim/bundle/vundle" ]; then
 fi
 
 # setup task client certs for syncing
-for f in scottl.cert scottl.key ca.cert; do
-  if [ -x `type -P scp` -a ! -f "${HOME}/.task/${f}.pem" ]; then
-    echo "Copying task sync client ${f} (ensure ssh keys setup!)..."
-    mkdir -p "${HOME}/.task"
-    scp scottl@mini.sct.tl:/Users/scottl/.task/${f}.pem \
-        "${HOME}/.task/${f}.pem"
-    chmod 600 "${HOME}/.task/${f}.pem"
-  fi
-done
+read -p "Setup task syncing?" yn
+case $yn in
+  [Yy]* ) 
+    for f in scottl.cert scottl.key ca.cert; do
+      if [ -x `type -P scp` -a ! -f "${HOME}/.task/${f}.pem" ]; then
+        echo "Copying task sync client ${f} (ensure ssh keys setup!)..."
+        mkdir -p "${HOME}/.task"
+        scp scottl@mini.sct.tl:/Users/scottl/.task/${f}.pem \
+            "${HOME}/.task/${f}.pem"
+        chmod 600 "${HOME}/.task/${f}.pem"
+      fi
+    done
+    break;;
+  [Nn]* ) break;;
+  * ) echo "Please answer yes or no.";;
+esac
+
+# setup alternate gitconfig email (TODO)
