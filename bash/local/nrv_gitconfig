@@ -1,0 +1,15 @@
+[user]
+	name = Scott Leishman
+	email = scott@nervanasys.com
+[alias]
+	co = checkout
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	grep = auto
+[core]
+	editor = vimx
+	autocrlf = input
+[credential]
+	helper = cache --timeout=3600
