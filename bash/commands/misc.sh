@@ -48,6 +48,7 @@ function mc {
 
 # python related
 alias p='python'
+alias ip='ipython'
 alias p3='python3'
 alias web='python -m SimpleHTTPServer'
 

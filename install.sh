@@ -54,9 +54,17 @@ case $yn in
         chmod 600 "${HOME}/.task/${f}.pem"
       fi
     done
-    break;;
-  [Nn]* ) break;;
+    ;;
+  [Nn]* ) ;;
   * ) echo "Please answer yes or no.";;
 esac
 
-# setup alternate gitconfig email (TODO)
+# setup alternate gitconfig
+read -p "Setup Nervana gitconfig?" yn
+case $yn in
+  [Yy]* )
+    cp $PWD/bash/local/nrv_gitconfig $PWD/gitconfig
+    ;;
+  [Nn]* ) ;;
+  * ) echo "Please answer yes or no.";;
+esac

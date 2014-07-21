@@ -2,7 +2,7 @@
 
 #make use of ssh-agent so we don't have to enter keyphrases every time
 #we ssh in the same session
-SSH_ENV="$HOME/.ssh/environment"
+SSH_ENV="$HOME/.ssh/${HOSTNAME}.environment"
 
 function start_agent {
     echo "Initializing new SSH agent..."
