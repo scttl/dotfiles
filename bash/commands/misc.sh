@@ -46,6 +46,8 @@ function mc {
     mkdir -p "$*" && cd "$*" && pwd
 }
 
+# tab aligned file viewing
+alias talign='column -t -s "	"'
 # python related
 alias p='python'
 alias ip='ipython'
