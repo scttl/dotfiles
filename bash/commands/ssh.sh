@@ -13,6 +13,11 @@ function start_agent {
     /usr/bin/ssh-add;
 }
 
+function fix_ssh {
+    eval $(tmux show-env \
+        | sed -n 's/^\(SSH_[^=]*\)=\(.*\)/export \1="\2"/p')
+}
+
 if [ -f "${SSH_ENV}" ]; then
     . "${SSH_ENV}" > /dev/null
     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
