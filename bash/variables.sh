@@ -25,6 +25,8 @@ MANPATH="$MANPATH:/usr/X11/man"
 LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/X11/lib64:/usr/X11/lib"
 # Go related (using the default workspace)
 PATH="$PATH:$HOME/go/bin"
+# gcloud related
+if [ -d "${HOME}/scratch/google-cloud-sdk/bin" ]; then PATH="${HOME}/scratch/google-cloud-sdk/bin:$PATH"; fi
 # Personal stuff gets the highest precedence
 PATH="$HOME/sbin:$HOME/bin:$PATH"
 MANPATH="$HOME/man:$MANPATH"
